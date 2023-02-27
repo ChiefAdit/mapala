@@ -1,0 +1,11 @@
+ @if (session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
+
+    @if ($statusUpdate)
+        <livewire:peminjam-update></livewire:peminjam-update>
+    @else
+        <livewire:peminjam-create></livewire:peminjam-create>
+    @endif
